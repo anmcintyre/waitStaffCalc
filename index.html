@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calc" ng-controller="calcCtrl">
+<head>
+	<meta charset="UTF-8">
+	<title>WaitStaff Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>	
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-messages.js"></script>	
+	<script type="text/javascript" src="model.js"></script>
+	<script type="text/javascript" src="main.js"></script>		
+</head>
+<body>
+	
+	<h1>Waitstaff Calculator</h1>
+	<section>
+		<div id="mealDetailsDiv" class="container">
+			<div class="header">Enter the Meal Details</div>
+			<div> 
+				<form name="myForm" ng-submit="submit()" novalidate>
+					<label>Base Meal Price:</label><span>$</span>
+						<input name="price" type="number" class="value" ng-model="currentMeal.price" required min="0" />
+					<label>Tax Rate:</label><span>%</span>
+						<input name="tax"   type="number" class="value" ng-model="currentMeal.tax" required min="0" />
+					<label>Tip Percentage:</label><span>%</span>
+						<input name="tip"   type="number" class="value" ng-model="currentMeal.tip" required min="0" />
+					<div class="buttons">
+						<input class="button" type="submit" value="Submit" />
+						<input class="button" type="button" value="Cancel" ng-click="cancel()"/>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="customerDiv" class="container">
+			<div class="header">Customer Charges</div>
+			<div class="underline indent">
+				<label>Subtotal:</label><span class="value">{{ customer.subTotal | currency }}</span>
+				<label>Tip:</label><span class="value">{{ customer.tip | currency }}</span>
+			</div>
+			<div class="indent">				
+				<label>Total:</label><span class="value">{{ customer.total | currency }}</span>
+			</div>
+		</div>
+		<div id="earningsDiv" class="container">
+			<div class="header">My Earnings Info</div>
+			<div>
+				<label>Tip Total:</label><span class="value">{{ earnings.tipTotal | currency }}</span>
+				<label>Meal Count:</label><span class="value">{{ earnings.mealCount }}</span>
+				<label>Average Tip Per Meal:</label><span class="value">{{ earnings.avgTipPerMeal | currency  }}</span>
+			</div>
+		</div>
+		<input id="reset" type="button" value="Reset" ng-click="reset()" />
+	</section>	
+	<section>		
+		<div ng-messages="myForm.$submitted && myForm.price.$error" role="alert">
+			<div ng-message="required">Please enter the price.</div>
+			<div ng-message="number">The price is not a number.  Please enter a valid price.</div>
+			<div ng-message="min">Please enter a number larger than 0 for the price.</div>
+		</div>	
+		<div ng-messages="myForm.$submitted && myForm.tax.$error" role="alert">
+			<div ng-message="required">Please enter the tax.</div>
+			<div ng-message="number">The tax is not a number.  Please enter a valid tax.</div>
+			<div ng-message="min">Please enter a number larger than 0 for the tax.</div>
+		</div>
+		<div ng-messages="myForm.$submitted && myForm.tip.$error" role="alert">
+			<div ng-message="required">Please enter the tip.</div>
+			<div ng-message="number">The tip is not a number.  Please enter a valid tip.</div>
+			<div ng-message="min">Please enter a number larger than 0 for the tip.</div>
+		</div>									
+	</section>			
+</body>
+</html>

@@ -1,0 +1,107 @@
+body{
+    font-family: Verdana, Arial, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+section{
+    width: 50em;
+    margin: 0 auto;
+}
+
+.container{
+    border: 1px solid black;
+    width: 20em;
+    float: left;
+    margin-left: 2em;
+    margin-bottom: 30px;
+}
+
+.header{
+    font-weight: bold;
+    border-bottom: 1px solid black; 
+    padding: 0.5em;   
+    padding-left: 1em;
+    margin-bottom: 1em;      
+}
+
+label{
+    width: 10em;
+    text-align: right;
+    float:  left;
+    clear: left;
+    padding: 0.5em 0;
+}
+
+#mealDetailsDiv span{
+    width: 1em;
+    float: left;
+    margin-top: 0.5em;
+    margin-left: 1em;
+    text-align: right;
+}
+
+.value{
+    float: left;
+    margin-top: 0.5em;
+    width: 6em;
+    margin-left: 1em;
+}
+
+#mealDetailsDiv{
+    height: 352px;
+}
+
+#mealDetailsDiv .value{
+    margin-left: 3px;
+}
+
+.buttons{
+    display: inline-block;
+    position: relative;
+    float: left;
+    padding-top: 8em;
+    clear: left;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+#customerDiv, #earningsDiv{
+    height: 160px;
+}
+
+#customerDiv label{
+    width: 7em;
+}
+
+.underline {
+    border-bottom: 1px solid black;
+    display: inline-block;
+}
+
+.indent{
+    margin-left: 1em;
+}
+
+#earningsDiv label{
+    width: 12em;
+}
+
+#reset{
+    float: right;
+    clear: left;
+}
+
+.ng-active{
+  width: 30em;
+  margin: 0 auto;
+  border: 3px solid red;
+  position: relative;
+  padding: 5px; 
+  clear: both;
+  color: red;
+  display: block;
+}
