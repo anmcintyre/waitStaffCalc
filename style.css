@@ -6,16 +6,18 @@ h1{
     text-align: center;
 }
 
+nav{
+  text-align: center;
+}
+
 section{
-    width: 50em;
-    margin: 0 auto;
+    width: 20em;
+    margin: 2em auto;
 }
 
 .container{
     border: 1px solid black;
     width: 20em;
-    float: left;
-    margin-left: 2em;
     margin-bottom: 30px;
 }
 
@@ -51,7 +53,7 @@ label{
 }
 
 #mealDetailsDiv{
-    height: 352px;
+    height: 15em;
 }
 
 #mealDetailsDiv .value{
@@ -62,7 +64,7 @@ label{
     display: inline-block;
     position: relative;
     float: left;
-    padding-top: 8em;
+    padding-top: 2em;
     clear: left;
     margin: 0 auto;
     width: 100%;

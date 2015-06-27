@@ -1,0 +1,11 @@
+	<section>
+		<div id="earningsDiv" class="container">
+			<div class="header">My Earnings Info</div>
+			<div>
+				<label>Tip Total:</label><span class="value">{{ earnings.tipTotal | currency }}</span>
+				<label>Meal Count:</label><span class="value">{{ earnings.mealCount }}</span>
+				<label>Average Tip Per Meal:</label><span class="value">{{ earnings.avgTipPerMeal | currency  }}</span>
+			</div>
+		</div>
+		<input id="reset" type="button" value="Reset" ng-click="reset(myForm)" />
+	</section>
