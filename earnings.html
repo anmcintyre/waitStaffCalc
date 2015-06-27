@@ -6,6 +6,6 @@
 				<label>Meal Count:</label><span class="value">{{ earnings.mealCount }}</span>
 				<label>Average Tip Per Meal:</label><span class="value">{{ earnings.avgTipPerMeal | currency  }}</span>
 			</div>
+			<input id="reset" type="button" value="Reset" ng-click="reset(myForm)" />			
 		</div>
-		<input id="reset" type="button" value="Reset" ng-click="reset(myForm)" />
 	</section>

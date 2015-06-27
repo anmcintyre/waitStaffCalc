@@ -95,6 +95,7 @@ label{
 #reset{
     float: right;
     clear: left;
+    margin-top: 1em;
 }
 
 .ng-active{
@@ -106,4 +107,47 @@ label{
   clear: both;
   color: red;
   display: block;
+}
+/*
+.loading {
+  position:relative;
+  height:100%;
+}
+.loading:before {
+  position:absolute;
+  content:"";
+  left:0;
+  bottom:0;
+  right:0;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,0.9) no-repeat center center;
+  background-image: url('./loading-animation.gif');
+}
+*/
+.animate-view { 
+    position:absolute; 
+    width: 100%;
+}
+.animate-view.ng-enter, .animate-view.ng-leave{
+    transition:2s linear left,
+        3s linear opacity;
+}
+.animate-view.ng-enter{
+    opacity:0; 
+    left: 100%;
+}
+
+.animate-view.ng-enter-active{
+    opacity:1;
+    left: 0;    
+}
+.animate-view.ng-leave{ 
+    opacity:1;
+    left: 0;
+}
+
+.animate-view.ng-leave-active{
+    opacity: 0;
+    left: -100%;
 }
